@@ -1,0 +1,116 @@
+@charset "UTF-8";
+.menu {
+  background: #34495e;
+  display: flex;
+  justify-content: center;
+}
+.menu .menu-item {
+  position: relative;
+}
+.menu .menu-item:hover .dropdown {
+  display: block;
+}
+.menu button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.menu button:hover {
+  background: rgb(33.8356164384, 47.5, 61.1643835616);
+}
+
+.main-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 30px auto;
+  gap: 20px;
+  align-items: flex-start;
+}
+.main-container .left-sidebar, .main-container .right-sidebar {
+  flex: 0 0 250px;
+  text-align: center;
+}
+.main-container .left-sidebar .img-container img, .main-container .right-sidebar .img-container img {
+  width: 100%;
+  margin-left: 0;
+  height: auto;
+  border-radius: 4px;
+}
+.main-container .news-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.news-slider {
+  position: relative;
+  width: 100%;
+}
+.news-slider img {
+  width: 100%; /* Делаем его адаптивным */
+  height: auto; /* Сохраняем пропорции */
+  max-height: 500px; /* Чтобы не был слишком длинным */
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.news-slider .prev, .news-slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.news-slider .prev:hover, .news-slider .next:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+.news-slider .prev {
+  left: 10px;
+}
+.news-slider .next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  .main-container .left-sidebar, .main-container .right-sidebar {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
+
+.main-container {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;                  
+    max-width: 100%;               
+    margin: 0;                     
+    gap: 0;                        /* Убираем лишние промежутки */
+
+    .left-sidebar {
+        flex: 0 0 250px;          
+        text-align: left;         
+    }
+
+    .right-sidebar {
+        flex: 0 0 250px;          
+        text-align: right;         
+    }
+
+    .news-section {
+        flex: 1;                   
+        margin: 0 40px;            
+    }
+}

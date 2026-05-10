@@ -1,0 +1,102 @@
+$primary-blue: #2f4f6f;      // Основной синий
+$secondary-dark: #34495e;    // Тёмный для меню
+$sidebar-width: 450px;       // Ширина боковушек
+$transition-speed: 0.3s;     // Скорость анимации
+
+
+
+// Навигация
+.menu {
+    background: $secondary-dark;
+    display: flex;
+    justify-content: center;
+
+    .menu-item {
+        position: relative;
+        &:hover .dropdown { display: block; } // Ховер на родителя открывает потомка
+    }
+
+    button {
+        background: none;
+        border: none;
+        color: white;
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: background $transition-speed;
+        &:hover { background: darken($secondary-dark, 10%); }
+    }
+}
+
+// Главный контейнер (исправляем сжатие и "заходы")
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 20px;
+    align-items: flex-start;
+
+    .left-sidebar, .right-sidebar {
+        flex: 0 0 $sidebar-width;
+        text-align: center;
+        
+        .img-container img {
+            width: 100%; // Картинка теперь не "налезает", а вписана в 150px
+            margin-left: 0; // Убираем твои отрицательные отступы
+            height: auto;
+            border-radius: 4px;
+        }
+    }
+
+    .news-section {
+        flex: 1; // Занимает всё свободное место
+        min-width: 0;
+    }
+}
+
+// Слайдер (исправляем гигантские размеры)
+.news-slider {
+    position: relative;
+    width: 100%;
+
+    img {
+        width: 100%;       /* Делаем его адаптивным */
+        height: auto;      /* Сохраняем пропорции */
+        max-height: 500px; /* Чтобы не был слишком длинным */
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.7);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: $transition-speed;
+
+        &:hover {
+            background: #fff;
+            transform: translateY(-50%) scale(1.1);
+        }
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+}
+
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        padding: 0 15px;
+        
+        .left-sidebar, .right-sidebar {
+            display: none; // Как ты и хотел
+        }
+    }
+}

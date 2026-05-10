@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<photos>
+    <gallery name="leader">
+        <image>Header/лидер года1.jpg</image>
+        <image>Header/лидер года2.jpg</image>
+        <image>Header/лидер года3.jpg</image>
+        <image>Header/лидер года4.jpg</image>
+        <image>Header/лидер года5.jpg</image>
+    </gallery>
+    <gallery name="zarnitchka">
+        <image>Header/29_04_2026_Зарничка_1.jpg</image>
+        <image>Header/29_04_2026_Зарничка_2.jpg</image>
+        <image>Header/29_04_2026_Зарничка_3.jpg</image>
+        <image>Header/29_04_2026_Зарничка_4.jpg</image>
+        <image>Header/29_04_2026_Зарничка_5.jpg</image>
+    </gallery>
+    <gallery name="zarnica">
+        <image>Header/22_04_2026_Зарница_1.jpg</image>
+        <image>Header/22_04_2026_Зарница_2.jpg</image>
+        <image>Header/22_04_2026_Зарница_3.jpg</image>
+        <image>Header/22_04_2026_Зарница_4.jpg</image>
+        <image>Header/22_04_2026_Зарница_5.jpg</image>
+        <image>Header/22_04_2026_Зарница_6.jpg</image>
+    </gallery>
+    <gallery name="orlenok">
+        <image>Header/17_04_2026_Орленок_1.jpg</image>
+        <image>Header/17_04_2026_Орленок_2.jpg</image>
+        <image>Header/17_04_2026_Орленок_3.jpg</image>
+        <image>Header/17_04_2026_Орленок_4.jpg</image>
+        <image>Header/17_04_2026_Орленок_5.jpg</image>
+    </gallery>
+    <gallery name="poezd">
+        <image>Header/поезд памяти1.jpg</image>
+        <image>Header/поезд памяти2.jpg</image>
+        <image>Header/поезд памяти3.jpg</image>
+        <image>Header/поезд памяти4.jpg</image>
+    </gallery>
+    <gallery name="parad">
+        <image>Header/Парад_октяб_войск1.jpg</image>
+        <image>Header/Парад_октяб_войск2.jpg</image>
+        <image>Header/Парад_октяб_войск3.jpg</image>
+        <image>Header/Парад_октяб_войск4.jpg</image>
+        <image>Header/Парад_октяб_войск5.jpg</image>
+        <image>Header/Парад_октяб_войск6.jpg</image>
+        <image>Header/Парад_октяб_войск7.jpg</image>
+        <image>Header/Парад_октяб_войск8.jpg</image>
+    </gallery>
+</photos>
