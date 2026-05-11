@@ -46,4 +46,6 @@ function changeSlide(direction) {
     if (currentIndex >= images.length) {
         currentIndex = 0;
     }
+
+    document.getElementById('school-img').src = images[currentIndex];
 }
