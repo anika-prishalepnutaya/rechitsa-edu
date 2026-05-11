@@ -176,3 +176,13 @@ strong {
     }
 }
 
+
+
+#preschool-img {
+    width: 100%;
+    height: 500px;     /* Устанавливаем фиксированную высоту */
+    object-fit: cover; /* Это самое важное: картинка обрежется, но не растянется */
+    border-radius: 8px;
+    display: block;
+}
+

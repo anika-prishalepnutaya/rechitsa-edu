@@ -89,6 +89,9 @@
   .main-container .left-sidebar, .main-container .right-sidebar {
     display: none;
   }
+    .news-slider img {
+        height: 300px; /* Уменьшаем высоту для телефонов */
+    }
 }/*# sourceMappingURL=styles.css.map */
 
 .main-container {
