@@ -18,6 +18,8 @@ if (currentPage.includes('gumnaziya')) {
     images = ["школа7.jpg", "школа7_1.jpg", "школа7_2.jpg", "школа7_3.jpg", "школа7_4.jpg", "школа7_5.jpg"];
 } else if (currentPage.includes('school_8')) {
     images = ["школа8.jpg", "школа8_1.jpg", "школа8_2.jpg", "школа8_3.jpg"];
+} else if (currentPage.includes('school_9')) {
+    images = ["школа9.jpg", "школа9_1.jpg", "школа9_2.jpg"];
 } else if (currentPage.includes('school_10')) {
     images = ["школа10.jpg", "школа10_1.jpg"];
 } else if (currentPage.includes('school_11')) {
@@ -44,6 +46,4 @@ function changeSlide(direction) {
     if (currentIndex >= images.length) {
         currentIndex = 0;
     }
-
-    document.getElementById('school-img').src = images[currentIndex];
 }

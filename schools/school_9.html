@@ -7,9 +7,8 @@
     <link rel='stylesheet' href='../school.css'>
 </head>
 <body class='school'>
+<a href="../index.html" class="back-home">← Вернуться на главную страницу</a>
    <div class="container">
-    <!-- 1. Возврат к списку -->
-    <a href="../Rechitsa_edu.html">← Вернуться к списку учреждений</a>
 
     <!-- 2. Полное наименование -->
     <h1>Государственное учреждение образования<br>«Средняя школа № 9 г. Речицы»</h1>
@@ -61,8 +60,11 @@
 
     <!-- 7. Краткая характеристика -->
     <h2>Об учреждении</h2>
- 
-        <img id="school-img" src="школа_9.jpg" width="100%">
+          <div class="slider">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+         <img id="school-img" src="школа9.jpg" width="100%">
+    </div>
 
 
     <p>Основными задачами ГУО «Средняя школа № 9 г. Речицы» являются:</p>
