@@ -138,4 +138,8 @@ justify-content: center;
 padding-bottom: 5%;
 }
 
-
+.news-item img {
+    width: 100%;
+    object-fit: cover;    /* Заполнит блок без искажений пропорций */
+    object-position: top center; /* Сфокусирует кроп на верхней части (на лицах) */
+}
