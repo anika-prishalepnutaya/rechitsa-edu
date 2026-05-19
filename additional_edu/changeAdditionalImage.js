@@ -1,7 +1,5 @@
-// Определяем, на какой странице мы находимся
 const currentPage = window.location.pathname;
 
-// Проверяем название файла и устанавливаем картинки
 let images = [];
 
 if (currentPage.includes('dom_tvorchestva')) {
@@ -11,14 +9,13 @@ if (currentPage.includes('dom_tvorchestva')) {
 } else if (currentPage.includes('sots-ped_center')) {
     images = ["соц-пед_центр.jpg", "соц-пед_центр1jpg.jpg", "соц-пед_центр2.jpg", "соц-пед_центр3.jpg"];
 } else {
-    // Если не найдено - пустой массив
     images = [];
 }
 
 let currentIndex = 0;
 
 function changeSlide(direction) {
-    if (images.length === 0) return; // Если нет картинок - не делаем ничего
+    if (images.length === 0) return; 
     
     currentIndex += direction;
 
