@@ -112,6 +112,10 @@ p a {
     border-radius: 8px;
 }
 
+a:hover {
+       text-decoration: underline;
+}
+
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -174,3 +178,13 @@ strong {
     }
 }
 
+
+
+
+#special-img {
+    width: 100%;
+    height: 500px;   
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}

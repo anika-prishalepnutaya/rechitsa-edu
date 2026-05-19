@@ -12,7 +12,6 @@
 
 <body>
     <svg style="display: none;">
-        <!-- Шаблон стрелки влево -->
         <symbol id="icon-prev" viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="3" stroke-linecap="round"
                 stroke-linejoin="round" fill="none" />
@@ -24,7 +23,6 @@
                 stroke-linejoin="round" fill="none" />
         </symbol>
     </svg>
-
 
 
     <div classname="container">
@@ -153,14 +151,13 @@
                             первое место и доказав, что Речица по праву гордится своими юными лидерами.</p>
 
                         <div class="news-slider" data-gallery="leader">
-                            <!-- Кнопка "Назад" -->
+
                             <button class="prev" onclick="changeNewsSlide(this, -1)">
                                 <svg width="20" height="20">
                                     <use href="#icon-prev"></use>
                                 </svg>
                             </button>
 
-                            <!-- Кнопка "Вперед" -->
                             <button class="next" onclick="changeNewsSlide(this, 1)">
                                 <svg width="20" height="20">
                                     <use href="#icon-next"></use>
@@ -250,14 +247,13 @@
                             воспитание молодёжи.
                         </p>
                         <div class="news-slider" data-gallery="zarnica">
-                            <!-- Кнопка "Назад" -->
+
                             <button class="prev" onclick="changeNewsSlide(this, -1)">
                                 <svg width="20" height="20">
                                     <use href="#icon-prev"></use>
                                 </svg>
                             </button>
 
-                            <!-- Кнопка "Вперед" -->
                             <button class="next" onclick="changeNewsSlide(this, 1)">
                                 <svg width="20" height="20">
                                     <use href="#icon-next"></use>
@@ -303,14 +299,13 @@
                         <p>Поздравляем победителей и призёров! Выражаем благодарность педагогам за качественную
                             подготовку команд и вклад в патриотическое воспитание молодёжи.</p>
                         <div class="news-slider" data-gallery="orlenok">
-                            <!-- Кнопка "Назад" -->
+
                             <button class="prev" onclick="changeNewsSlide(this, -1)">
                                 <svg width="20" height="20">
                                     <use href="#icon-prev"></use>
                                 </svg>
                             </button>
 
-                            <!-- Кнопка "Вперед" -->
                             <button class="next" onclick="changeNewsSlide(this, 1)">
                                 <svg width="20" height="20">
                                     <use href="#icon-next"></use>
@@ -350,14 +345,13 @@
                             отправиться в уникальное путешествие на «Поезде Памяти», объединяющем талантливую и
                             неравнодушную молодежь Беларуси и России!</p>
                         <div class="news-slider" data-gallery="poezd">
-                            <!-- Кнопка "Назад" -->
+
                             <button class="prev" onclick="changeNewsSlide(this, -1)">
                                 <svg width="20" height="20">
                                     <use href="#icon-prev"></use>
                                 </svg>
                             </button>
 
-                            <!-- Кнопка "Вперед" -->
                             <button class="next" onclick="changeNewsSlide(this, 1)">
                                 <svg width="20" height="20">
                                     <use href="#icon-next"></use>
@@ -390,14 +384,13 @@
                         <p>3 место – команда ГУО «Средняя школа №11 г.Речицы».</p>
                         </p>
                         <div class="news-slider" data-gallery="parad">
-                            <!-- Кнопка "Назад" -->
+
                             <button class="prev" onclick="changeNewsSlide(this, -1)">
                                 <svg width="20" height="20">
                                     <use href="#icon-prev"></use>
                                 </svg>
                             </button>
 
-                            <!-- Кнопка "Вперед" -->
                             <button class="next" onclick="changeNewsSlide(this, 1)">
                                 <svg width="20" height="20">
                                     <use href="#icon-next"></use>
@@ -440,12 +433,10 @@
 
 
     <script>
-        // Объект для хранения всех галерей
         let allGalleries = {};
-        let images = []; // Текущие изображения для страницы
+        let images = []; 
         let currentIndex = 0;
 
-        // 1. Функция для загрузки данных из XML (Пункт 3.2 ТЗ)
         async function loadXMLData() {
             try {
                 const response = await fetch('photos.xml');
@@ -459,19 +450,16 @@
                     allGalleries[name] = imgs;
                 });
 
-                // После загрузки определяем картинки для текущей страницы
                 initCurrentPageGallery();
             } catch (err) {
                 console.error("Ошибка загрузки XML:", err);
             }
         }
 
-        // 2. Логика определения картинок (вместо твоего длинного if/else)
         function initCurrentPageGallery() {
             const path = window.location.pathname;
 
-            // Ищем совпадение имени страницы с именем галереи в XML
-            // Например, если файл называется kindergarten_22.html, ищем галерею "kindergarten_22"
+          
             for (let key in allGalleries) {
                 if (path.includes(key)) {
                     images = allGalleries[key];
@@ -479,11 +467,9 @@
                 }
             }
 
-            // Если это главная страница, подгружаем галереи для новостей отдельно (они у тебя уже в XML)
             console.log("Загружены изображения:", images);
         }
 
-        // 3. Твоя функция переключения слайдов (без изменений)
         function changeSlide(direction) {
             if (images.length === 0) return;
             currentIndex = (currentIndex + direction + images.length) % images.length;
@@ -491,7 +477,6 @@
             if (imgElement) imgElement.src = images[currentIndex];
         }
 
-        // 4. Универсальный слайдер для новостей (использует данные из XML)
         function changeNewsSlide(button, direction) {
             const slider = button.closest('.news-slider');
             const galleryName = slider.dataset.gallery;
@@ -499,7 +484,6 @@
 
             if (!newsImages) return;
 
-            // Находим или создаем индекс для этой конкретной новости
             if (slider.dataset.index === undefined) slider.dataset.index = 0;
 
             let idx = parseInt(slider.dataset.index);
@@ -509,7 +493,6 @@
             slider.querySelector('.gallery-img').src = newsImages[idx];
         }
 
-        // 5. Раскрытие новостей по клику (исправлено на более надежное)
         document.querySelectorAll('.news-item').forEach(item => {
             const title = item.querySelector('.news-title');
             if (title) {
@@ -528,3 +511,4 @@
 
 </body>
 </html>
+

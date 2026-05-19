@@ -1,11 +1,10 @@
-$primary-blue: #2f4f6f;      // Основной синий
-$secondary-dark: #34495e;    // Тёмный для меню
-$sidebar-width: 450px;       // Ширина боковушек
-$transition-speed: 0.3s;     // Скорость анимации
+$primary-blue: #2f4f6f;      
+$secondary-dark: #34495e;    
+$sidebar-width: 450px;       
+$transition-speed: 0.3s;     
 
 
 
-// Навигация
 .menu {
     background: $secondary-dark;
     display: flex;
@@ -27,7 +26,7 @@ $transition-speed: 0.3s;     // Скорость анимации
     }
 }
 
-// Главный контейнер (исправляем сжатие и "заходы")
+
 .main-container {
     display: flex;
     max-width: 1200px;
@@ -40,28 +39,27 @@ $transition-speed: 0.3s;     // Скорость анимации
         text-align: center;
         
         .img-container img {
-            width: 100%; // Картинка теперь не "налезает", а вписана в 150px
-            margin-left: 0; // Убираем твои отрицательные отступы
+            width: 100%;
+            margin-left: 0;
             height: auto;
             border-radius: 4px;
         }
     }
 
     .news-section {
-        flex: 1; // Занимает всё свободное место
+        flex: 1; 
         min-width: 0;
     }
 }
 
-// Слайдер (исправляем гигантские размеры)
 .news-slider {
     position: relative;
     width: 100%;
 
     img {
-        width: 100%;       /* Делаем его адаптивным */
-        height: auto;      /* Сохраняем пропорции */
-        max-height: 500px; /* Чтобы не был слишком длинным */
+        width: 100%;       
+        height: auto;      
+        max-height: 500px; 
         object-fit: cover;
         border-radius: 8px;
     }
@@ -96,7 +94,7 @@ $transition-speed: 0.3s;     // Скорость анимации
         padding: 0 15px;
         
         .left-sidebar, .right-sidebar {
-            display: none; // Как ты и хотел
+            display: none;
         }
     }
 }
