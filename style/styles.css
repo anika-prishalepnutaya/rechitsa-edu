@@ -49,9 +49,9 @@
   width: 100%;
 }
 .news-slider img {
-  width: 100%; /* Делаем его адаптивным */
-  height: auto; /* Сохраняем пропорции */
-  max-height: 500px; /* Чтобы не был слишком длинным */
+  width: 100%; 
+  height: auto; 
+  max-height: 500px; 
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
@@ -90,7 +90,7 @@
     display: none;
   }
     .news-slider img {
-        height: 300px; /* Уменьшаем высоту для телефонов */
+        height: 300px; 
     }
 }/*# sourceMappingURL=styles.css.map */
 
@@ -100,7 +100,7 @@
     width: 100%;                  
     max-width: 100%;               
     margin: 0;                     
-    gap: 0;                        /* Убираем лишние промежутки */
+    gap: 0;                        
 
     .left-sidebar {
         flex: 0 0 250px;          
