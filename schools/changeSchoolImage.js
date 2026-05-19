@@ -1,7 +1,6 @@
 // Определяем, на какой странице мы находимся
 const currentPage = window.location.pathname;
 
-// Проверяем название файла и устанавливаем картинки
 let images = [];
 
 if (currentPage.includes('gumnaziya')) {
@@ -19,7 +18,7 @@ if (currentPage.includes('gumnaziya')) {
 } else if (currentPage.includes('school_8')) {
     images = ["школа8.jpg", "школа8_1.jpg", "школа8_2.jpg", "школа8_3.jpg"];
 } else if (currentPage.includes('school_9')) {
-    images = ["школа9.jpg", "школа9_1.jpg", "школа9_2.jpg"];
+    images = ["школа9.jpg", "школа9_1.jpg"];
 } else if (currentPage.includes('school_10')) {
     images = ["школа10.jpg", "школа10_1.jpg"];
 } else if (currentPage.includes('school_11')) {
@@ -29,14 +28,13 @@ if (currentPage.includes('gumnaziya')) {
 } else if (currentPage.includes('licei')) {
     images = ["лицей.jpg","лицей1.jpg", "лицей2.jpg"];
 } else {
-    // Если не найдено - пустой массив
     images = [];
 }
 
 let currentIndex = 0;
 
 function changeSlide(direction) {
-    if (images.length === 0) return; // Если нет картинок - не делаем ничего
+    if (images.length === 0) return; 
     
     currentIndex += direction;
 
