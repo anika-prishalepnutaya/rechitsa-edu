@@ -21,6 +21,10 @@ let images = [];
     images = ["сад3.jpg", "сад3_1.jpg", "сад3_2.jpg", "сад3_3.jpg"];
 } else if (currentPage.includes('preschool_center')) {
     images = ["дошк_образование.jpg", "дошк_образование_1.jpg", "дошк_образование_2.jpg", "дошк_образование_3.jpg"];
+    
+} else if (currentPage.includes('sanatory_kindergarten_6')) {
+images = ["сад6.jpg", "сад6_1.jpg", "сад6_2.jpg"];
+
 } else if (currentPage.includes('kindergarten_7')) {
     images = ["сад7.jpg", "сад7_1.jpg", "сад7_2.jpg"];
 } else if (currentPage.includes('kindergarten_8')) {
